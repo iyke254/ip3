@@ -4,5 +4,9 @@
   }, {
   "query": "How many People are on earth?",
   "author": "Eragon"
-  }]
+  }],
+  "answers": [{
+    "author": "Paul",
+    "reply": "About 7 billion"
+    }]
 }

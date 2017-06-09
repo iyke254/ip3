@@ -4,7 +4,7 @@ Post your questions and our wide user network will surely find an answer for you
 
 <ul>
   {{#each model as |question|}}
-     <li>{{question.query}} by {{question.author}}</li>
+     {{new-question question=question}}
   {{/each}}
 </ul>
 

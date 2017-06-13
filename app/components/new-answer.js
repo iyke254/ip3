@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  //when the addNewAnswer is set as false it will onlyy display the button
   addNewAnswer: false,
   actions: {
     answerFormShow() {

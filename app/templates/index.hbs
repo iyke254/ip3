@@ -1,26 +1,25 @@
-<h1> Welcome to Quora 2.0</h1>
+<h1> Welcome to Quora 2.0</h1> Post your questions and our wide user network will surely find an answer for you.
 
-Post your questions and our wide user network will surely find an answer for you.
+<div class="nxt container-fluid">
+  <ul>
+    {{#each model.questions as |question|}}
+      {{question-tile question=question edit="edit"}}
+    {{/each}}
+  </ul>
 
-<ul class="nxt">
-  {{#each model.questions as |question|}}
-     {{question-tile question=question edit="edit"}}
-  {{/each}}
-</ul>
+  {{new-question saveQuestion2="saveQuestion3"}}
 
-{{new-question saveQuestion2="saveQuestion3"}}
+  <br>
 
-<br>
+  <h2> All Answers</h2>
 
-<h2> All Answers</h2>
-
-<ul>
-  {{#each model.answers as |answer|}}
-    <li>{{answer.reply}} by  {{answer.author}}</li>
-  {{/each}}
-</ul>
+  <ul>
+    {{#each model.answers as |answer|}}
+      <li>{{answer.reply}} by {{answer.author}}</li>
+    {{/each}}
+  </ul>
 
 
-{{new-answer saveAnswer="saveAnswer"}}
-
+  {{new-answer saveAnswer="saveAnswer"}}
+</div>
 {{outlet}}
